@@ -58,8 +58,8 @@ Examples:
         choices=sorted(head_profiles.HEADS),
         help="Which printhead is fitted to this machine (default: "
              f"{head_profiles.DEFAULT_HEAD}). One firmware build serves every "
-             "head that shares the wire frame, so the board cannot report this "
-             "-- the daemon refuses a job packed for a different head.",
+             "head that shares the wire frame, so the board cannot report this. "
+             "The daemon refuses a job packed for a different head.",
     )
     parser.add_argument(
         "--debug", "-d",
