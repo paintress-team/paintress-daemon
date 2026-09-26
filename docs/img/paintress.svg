@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 181 139" width="181" height="139"
+     fill-rule="evenodd" clip-rule="evenodd" role="img" aria-label="Paintress">
+  <title>Paintress</title>
+  <style>.ink{fill:#4b4b4d}@media (prefers-color-scheme:dark){.ink{fill:#c9c9cb}}</style>
+  <polygon class="ink" points="109,67 121,78 181,139 139,139 0,0 112,0 163,51 179,67 "/>
+  <polygon fill="#d92d81" points="0,92 0,43 35,78 17,109 "/>
+  <polygon fill="#00afef" points="139,139 0,139 17,109 109,109 "/>
+  <polygon fill="#ffda23" points="51,51 0,0 0,43 35,78 "/>
+  <polygon fill="#fff212" points="78,78 35,78 51,51 "/>
+  <polygon fill="#ec268f" points="78,78 35,78 17,109 109,109 "/>
+  <polygon fill="#009dd6" points="17,109 0,92 0,139 "/>
+</svg>

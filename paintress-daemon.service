@@ -1,0 +1,26 @@
+# /etc/systemd/system/paintress-daemon.service
+
+[Unit]
+Description=Paintress Daemon
+After=network-online.target klipper.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi
+# Binds 127.0.0.1 by default (loopback only): the protocol has no
+# authentication and its commands fire ink and reset hardware. The Klipper
+# plugin talks to localhost, so nothing more is needed. Only append
+# `--host 0.0.0.0` on a network you fully trust.
+ExecStart=/home/pi/klippy-env/bin/python -m paintress_daemon
+Restart=always
+RestartSec=10
+# Shutdown runs the safe-stop sequence (firmware ABORT + RESET, ACK-confirmed,
+# then the serial teardown) before exiting; give it room so SIGKILL never cuts
+# the board loose mid-stop. The sequence itself is bounded well under this.
+TimeoutStopSec=30
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
